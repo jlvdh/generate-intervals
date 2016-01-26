@@ -13,6 +13,10 @@
   ],
   "author": "Jorg van der Ham",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlvdh/generate-intervals"
+  },
   "dependencies": {
     "moment": "^2.9.0"
   }
