@@ -1,6 +1,6 @@
 {
   "name": "generate-intervals",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple module to generate an array containing period objects for a specified interval",
   "main": "index.js",
   "scripts": {

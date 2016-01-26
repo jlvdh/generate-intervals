@@ -1,4 +1,4 @@
-exports = function(start, end, intervalAmount, dateInterval, cb) {
+exports.generateIntervals = function(start, end, intervalAmount, dateInterval, cb) {
   /**
    * INITIALISE
    * - check if date is valid
@@ -25,5 +25,5 @@ exports = function(start, end, intervalAmount, dateInterval, cb) {
     });
     start = nextInterval;
   }
-  cb(null, intervals);
+  cb(intervals);
 };
