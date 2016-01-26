@@ -1,4 +1,4 @@
-exports.generateIntervals = function(start, end, intervalAmount, dateInterval, cb) {
+exports = function(start, end, intervalAmount, dateInterval, cb) {
   /**
    * INITIALISE
    * - check if date is valid
@@ -8,6 +8,11 @@ exports.generateIntervals = function(start, end, intervalAmount, dateInterval, c
     cb('not a valid date');
     return;
   }
+  if(start >= end) {
+    cb('start is after end date');
+    return;
+  }
+
   var intervals = [];
   if (!~['day', 'week', 'year'].indexOf(dateInterval)) {
     dateInterval = 'month';
@@ -20,5 +25,5 @@ exports.generateIntervals = function(start, end, intervalAmount, dateInterval, c
     });
     start = nextInterval;
   }
-  cb(intervals);
+  cb(null, intervals);
 };
