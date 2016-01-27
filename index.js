@@ -25,5 +25,5 @@ exports.generateIntervals = function(start, end, intervalAmount, dateInterval, c
     });
     start = nextInterval;
   }
-  cb(intervals);
+  cb(null, intervals);
 };
