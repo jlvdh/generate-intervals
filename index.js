@@ -18,7 +18,7 @@ exports.generateIntervals = function(start, end, intervalAmount, dateInterval, c
     dateInterval = 'month';
   }
   while (start <= end) {
-    var nextInterval = new Moment(start).add(intervalAmount, dateInterval)._d;
+    var nextInterval = new Moment(start).add(intervalAmount, dateInterval).toDate();
     intervals.push({
       start: start,
       end: nextInterval
