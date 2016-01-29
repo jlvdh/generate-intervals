@@ -25,5 +25,8 @@ exports.generateIntervals = function(start, end, intervalAmount, dateInterval, c
     });
     start = nextInterval;
   }
+  if(intervals.length > 100) {
+    cb('to many requests');
+  }
   cb(null, intervals);
 };
